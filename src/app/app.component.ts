@@ -28,9 +28,20 @@ export class AppComponent {
         if(message.body) {
           $(".message").remove();
           var case1 = JSON.parse(message.body);
-          $(".chat").append("<div class='message'>"+case1.cusip+"</div>")
-                    .append("<div class='message'>"+case1.date+"</div>")
-                    .append("<div class='message'>"+case1.marketAction+"</div>")
+          var cusip1 = $("td#cusip1").text();
+          console.log("cusip value : " + cusip1);
+          if(cusip1 == case1.cusip) {
+            $("td#date1").remove();
+            $("#mkt1").remove();
+            $("#cusip1").remove();
+            $("#row1").append("<td id='cusip1'>"+case1.cusip+"</td>")
+                      .append("<td id='mkt1'>"+case1.marketAction+"</td>")
+                      .append("<td id='date1'>"+new Date(case1.date)+"</td>")
+                      
+          }
+          //$(".chat").append("<div class='message'>"+case1.cusip+"</div>")
+          //          .append("<div class='message'>"+case1.date+"</div>")
+           //         .append("<div class='message'>"+case1.marketAction+"</div>")
           console.log(message.body);
         }
       });
