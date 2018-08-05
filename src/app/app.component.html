@@ -2,14 +2,14 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  <div class="chat-container">
+  <!--<div class="chat-container">
     <div class="chat">
       <div class="message"></div>
     </div>
-  </div>
+  </div>-->
 </div>
 
-<div class="footer">
+<!-- <div class="footer">
   <div class="send-button">
 
     <div class="send" (click)="sendMessage(input.value)">
@@ -17,4 +17,25 @@
     <input  id="input" type="text" #input>
   </div>
 
-</div>
+</div>-->
+
+
+<div>
+    <table border="1" align="center">
+      <tr>
+        <th>Cusip</th>
+        <th>Market Action</th>
+        <th>Date</th>
+      </tr>
+      <tr id="row1">
+        <td id="cusip1">123456789</td>
+        <td id="mkt1">Y</td>
+        <td id="date1">1333454</td>
+      </tr>
+      <tr>
+        <td id="cusip2">987654321</td>
+        <td id="mkt2">Y</td>
+        <td id="date2">1222457</td>
+      </tr>
+    </table>
+  </div>
