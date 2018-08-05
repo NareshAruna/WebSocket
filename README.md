@@ -8,7 +8,21 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng new app-name` to generate a new application. 
+
+Brose into the project folder app-name by `cd app-name`
+
+install the below libraries
+
+1) npm install stompjs;
+
+2) npm install sockjs-client
+
+3) npm install jquery (just to quickly access the DOM elements)
+
+If error comes up like `net` module not found, perform the below action
+
+`npm i --save net -compact`
 
 ## Build
 
