@@ -27,7 +27,10 @@ export class AppComponent {
       that.stompClient.subscribe("/chat", (message) => {
         if(message.body) {
           $(".message").remove();
-          $(".chat").append("<div class='message'>"+message+"</div>")
+          var case1 = JSON.parse(message.body);
+          $(".chat").append("<div class='message'>"+case1.cusip+"</div>")
+                    .append("<div class='message'>"+case1.date+"</div>")
+                    .append("<div class='message'>"+case1.marketAction+"</div>")
           console.log(message.body);
         }
       });
